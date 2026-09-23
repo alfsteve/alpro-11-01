@@ -6,9 +6,9 @@ package main
 		var a, b int
 
 		//Membaca input
-		fmt.Print("Masukkan nilai a:")
+		fmt.Print("Masukkan nilai a: ")
 		fmt.Scan(&a)
-		fmt.Print("Masukkan nilai b:")
+		fmt.Print("Masukkan nilai b: ")
 		fmt.Scan(&b)
 
 		//Menampilkan output
@@ -20,7 +20,7 @@ package main
 		fmt.Println(a * b)
 		fmt.Print("Hasil Pembagian: ")
 		fmt.Println(a / b)
-		fmt.Print("Hasil Persen: ")
+		fmt.Print("Hasil Sisa Hasil Bagi: ")
 		fmt.Println(a % b)
 
 }
