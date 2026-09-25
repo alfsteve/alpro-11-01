@@ -14,7 +14,7 @@ package main
 		fmt.Scan(&c)
 
 		//Menampilkan output
-		fmt.Print("Hasilnya : ")
+		fmt.Print("Hasilnya : ", a, " * 10000 + ", b, " * 5000 + ", c, " * 1000 = ")
 		fmt.Println(a * 10000 + b * 5000 + c * 1000)
 		
 	}
