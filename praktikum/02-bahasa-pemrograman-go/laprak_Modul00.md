@@ -18,16 +18,16 @@ import digunakan untuk memasukkan package yang diperlukan dalam program. Package
 Variabel merupakan nama dari suatu lokasi di memori yang digunakan untuk menyimpan data dengan tiper tertentu. Dalam Go, variabel dapat dideklarasikan menggunakan var. Beberapa tipe data dasar yang terdapat dalam modul meliputi:
 
 ##### a. Integer
-Digunakan untuk menyimpan bilangan bulat. Variabelnya berupa "int, int8, int32, int64, uint, uint8, uint32, dan uint64."
+Adalah tipe data yang digunakan untuk menyimpan bilangan bulat, yaitu bilangan yang tidak memiliki angka pecahan atau koma. Dalam Go, tipe integer itu terdiri dari int, int8, int32, int64, uint, uint8, uint32, dan uint64. Tipe ini dapat digunakan untuk menyimpan nilai seperti jumlah, skor, atau angka lainnya yang merupakan bilangan bulat.
 
 ##### b. Real 
-Digunakan untuk menyimpan bilangan pecahan atau bilangan real. Variabelnya berupa "float32 dan float64."
+Adalah tipe data yang digunakan untuk menyimpan bilangan pecahan atau bilangan real, yaitu bilangan yang dapat memiliki angka di belakang koma. Dalam Go, tipe data real terdiri dari float32 dan float64. Tipe ini digunakan ketika program membutuhkan nilai yang lebih tepat dalam bentuk pecahan atau hasil perhitungan desimal.
 
 ##### c. Boolean
-Digunakan untuk menyimpan nilai true atau false. Variabelnya berupa "bool."
+Adalah tipe data yang digunakan untuk menyimpan nilai logika, yaitu true atau false. Dalam Go, tipe data Boolean menggunakan bool. Nilai Boolean ini biasanya digunakan untuk menunjukkan suatu kondisi yang bernilai benar atau salah.
 
 ##### d. String
-Digunakan untuk menyimpan kumpulan karakter atau teks.
+Adalah tipe data yang digunakan untuk menyimpan kumpulan karakter atau teks. Dalam Go, tipe data string menggunakan string. Tipe ini biasanya digunakan untuk menyimpan data berupa nama, kata, maupun kalimat yang diperlukan dalam program.
 
 
 <!-- Tambahkan poin A, B, C, ... atau sub-topik 1, 2, 3, ... sesuai kebutuhan modul -->
