@@ -153,7 +153,7 @@ package main
 ```
 
 ##### Output
-![Screenshot Output Unguided] https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/cacahuang/output.png
+![Screenshot Output Unguided] (https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/cacahuang/output.png)
 
 #### Deskripsi
 Program ini digunakan untuk menghitung total nilai uang berdasarkan jumlah pecahan Rp10.000, Rp5.000, dan Rp1.000 yang dimasukkan. Program menerima input jumlah masing-masing pecahan, kemudian menghitung total nilainnya menggunakan operasi perkalian dan penjumlahan. Hasil total nilai uang ditampilkan setelah proses menghitung.
