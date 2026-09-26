@@ -84,6 +84,81 @@ func main() {
 #### Deskripsi
 Program ini digunakan untuk menghitung luas lingkaran berdasarkan jari-jari yang dimasukkan. Program menggunakan variabel pi dan r, kemudian menghitung luas dengan rumus pi * r * r. Hasil perhitungan luas lingkaran setelah input dimasukkan dan diproses.
 
+### 3. skor.go
+
+```go
+package main
+
+	import "fmt"
+
+	func main() {
+		var nama string
+		var skor_Emteka, skor_BahasaInggris int
+
+		//Membaca input
+		fmt.Println("Masukkan nama:")
+		fmt.Scan(&nama)
+
+		fmt.Println("Masukkan skor Emteka:")
+		fmt.Scan(&skor_Emteka)
+
+		fmt.Println("Masukkan skor Bahasa Inggris:")
+		fmt.Scan(&skor_BahasaInggris)
+		
+		//Menghitung total dan rata-rata (Pembagian bilangan bulat)
+
+		total := skor_Emteka + skor_BahasaInggris
+		rata_rata := total / 2
+
+		//Menampilkan output
+
+		fmt.Println(nama)
+		fmt.Println(total)
+		fmt.Println(rata_rata)
+
+		//Menampilkan nama gitu
+
+		fmt.Println("Nama :", nama)
+		fmt.Println("Total Skor :", total)
+		fmt.Println("Rata-rata Skor :", rata_rata)
+}
+```
+#### Deskripsi
+Program ini digunakan untuk menghitung total dan rata-rata skor dari dua mata pelajaran, yaitu Emteka dan Bahasa Inggris. Program menerima input nama dan kedua skor, kemudian menjumlahkan skor untuk mendapatkan total dan membaginya dengan 2 untuk mendapatkan rata-rata. Hasil berupa nama, total skor, dan rata-rata skor kemudian ditampilkan sebagai output.
+
+### 4. tukar.go
+
+```go
+package main
+
+	import "fmt"
+
+		func main() {
+
+		var a, b int
+	
+		//Membaca input
+
+		fmt.Print("Masukkan nilai a:")
+			fmt.Scan(&a)
+		
+		fmt.Print("Masukkan nilai b:")
+			fmt.Scan(&b)
+		
+		//Menukar nilai a dan b
+
+			a, b = b, a
+
+		//Menampilkan output
+
+			fmt.Println(a)
+			fmt.Println(b)
+
+}
+```
+#### Deskripsi
+Program ini digunakan untuk menukar nilai dari dua variabel yaitu a dan b. Program menerima dua nilai sebagai input, kemudian menukar keduanya menggunakan sintaks a, b = b, a. Setelah proses pertukaran selesai, nilai a dan b ditampilkan sebagai hasil output.
+
 <!-- Tambahkan blok file/kode lain sesuai jumlah file pada soal guided -->
 
 ## Unguided
