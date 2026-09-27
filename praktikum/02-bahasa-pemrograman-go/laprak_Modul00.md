@@ -246,5 +246,5 @@ Program ini digunakan untuk menghitung total nilai uang berdasarkan jumlah pecah
 Praktikum Modul 02 ini memberikan pemahaman pada saya tentang variabel, tipe data, input, output, operasi dasar dalam bahasa pemrograman Go. Melalui tugas guided dan unguided ini, konsepnya akan diterapkan dalam program perhitungan nilai, pertukaran variabel, konversi suhu, luas lingkaran, operasi aritmatika, dan perhitungan nilai uang. Hasil praktikum menunjukkan bahwa konsep dasar tersebut dapat digunakan untuk membuat program sederhana yang menerima input, melakukan proses, dan menghasilkan output sesuai kebutuhan kita.
 
 ## Referensi
-1. The Go Authors. (2026). The Go Programming Language Specification. Diakses pada 25 September 2026 melalui https://go.dev/ref/spec
-2. The Go Authors. (2026). Documentation - The Go Programming Language. Diakses pada 25 September 2026 melalui https://go.dev/doc/
+1. The Go Authors. (2025). The Go Programming Language Specification. California: Google Inc. Diakses pada 27 September 2026 melalui https://go.dev/ref/spec
+2. The Go Authors. (2025). Documentation - The Go Programming Language. California: Google Inc. Diakses pada 27 September 2026 melalui https://go.dev/doc/
