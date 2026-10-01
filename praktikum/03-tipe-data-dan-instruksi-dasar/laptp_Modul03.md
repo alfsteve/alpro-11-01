@@ -24,11 +24,11 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/renwxyz/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instriksi-dasar/tp/sisa/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/kue/Output.png)
 
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+[Program ini digunakan untuk menghitung sejumlah kue yang tersisa setelah sejumlah kue itu dibagikan kepada beberapa anggota keluarga secara merata. Program ini menerima dua input, yaitu jumlah kue dan jumlah anggota keluarga. Operator yang digunakan itu %, operator ini digunakan untuk mendapatkan sisa hasil pembagian jumlah kue dengan jumlah anggota keluarga.]
 
 ### 2. Boolean
 
@@ -40,7 +40,6 @@ package main
 	func main(){
 
 		var a bool
-		var b bool
 
 		fmt.Print("Masukkan nilai a: ")
 		fmt.Scan(&a)
@@ -52,6 +51,14 @@ package main
 }
 
 ```
+##### Output
+<!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/boolean/Output.png)
+
+
+#### Deskripsi
+[Program ini digunakan untuk menerima dan menampilkan sebuah nilai boolean, yaitu nilai yang hanya memiliki dua kemungkinan, yaitu true atau false. Program ini menggunakan variabel a dengan tipe data bool]
+
 
 ### 3. Mil ke Kilo
 
@@ -71,11 +78,11 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/renwxyz/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instriksi-dasar/tp/konversi/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/tp/mil_ke_kilo/Output.png)
 
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+[Program ini digunakan untuk mengkonversi jarak dari satuan mil (mile) ke kilometer (km). Program menerima jumlah mil dari pengguna, kemudian mengalikannya dengan nilai konversi 1 mil = 1,6 kilometer.]
 
 ## Kesimpulan
-[Tuliskan kesimpulan yang menjawab tujuan praktikum berdasarkan hasil yang diperoleh.]
+[Kesimpulan yang di dapat dari pembuatan ketiga program ini yaitu, kita dilatih untuk menggunakan logika untuk mengikuti soal-soal dari tugas tersebut, dan membiasakan diri untuk mengetik dan mengingat kode-kode yang digunakan.]
