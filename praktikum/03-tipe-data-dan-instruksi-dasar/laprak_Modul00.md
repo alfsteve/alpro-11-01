@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 03 - Variabel, Tipe Data, dan Operasi</h1>
+# <h1 align="center">Laporan Praktikum Modul 03 - Variabel dan Operator</h1>
 <p align="center">[Alfaro Steve Christian Hadiwiyata] - [109092600022]</p>
 
 ## Dasar Teori
@@ -134,7 +134,7 @@ func main(){
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/kalkulator/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/hari/Output.png)
 
 
 #### Deskripsi
@@ -158,7 +158,7 @@ func main(){
 ```
 
 ##### Output
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/cacahuang/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/reamur/Output.png)
 
 #### Deskripsi
 Program ini digunakan untuk menghitung total nilai uang berdasarkan jumlah pecahan Rp10.000, Rp5.000, dan Rp1.000 yang dimasukkan. Program menerima input jumlah masing-masing pecahan, kemudian menghitung total nilainnya menggunakan operasi perkalian dan penjumlahan. Hasil total nilai uang ditampilkan setelah proses menghitung.
