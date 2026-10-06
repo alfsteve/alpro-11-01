@@ -4,30 +4,22 @@
 ## Dasar Teori
 
 ### A. Bahasa Pemrograman Go (Golang)
-Go atau Golang merupakan bahasa pemrograman yang digunakan dalam praktikum Algoritma Pemrograman. Pada modul 02 ini, pembahasannya berfokus pada penggunaan bahasa Go untuk membuat suatu program yang melibatkan variabel, tipe, data, dan operasi.
+Dalam pemrograman ini, penyelesaian masalahnya dilakukan dengan mengidentifikasi data masukan (input), proses yang dilakukan, dan informasi keluaran (output). Selain itu, tipe data harus ditentukan sesuai dengan data yang digunakan, seperti int untuk bilangan bulat dan float32 untuk bilangan rill.
+
+Bahasa Go menggunakan package main, import, dan func main() sebagai struktur dasar program. Input dapat dibaca menggunakan fmt.Scan(), sedangkan output dapat ditampilkan menggunakan fmt.Println(). Operator aritmatika seperti +, *, /, dan % digunakan dalam proses perhitungan.
 
 ### B. Struktur Pemrograman Go
 
-#### 1. Pengertian package main dan func main()
-package main merupakan penanda kalau sebuah file berisi program utama dalam bahasa Go. Sementara itu, func main() berisi kode atau instruksi yang akan dijalankan ketika program dieksekusi. Kedua komponen ini merupakan bagian dasar dari struktur dalam program Go.
+#### 1. Input
+Menerima data dari pengguna menggunakan fmt.Scan().
 
-#### 2. import, fmt, Komentar, dan Variabel
-import digunakan untuk memasukkan package yang diperlukan dalam program. Package fmt digunakan untuk proses input dan output, seperti fmt.Scanln() untuk membaca masukan (Input) dan fmt.Println() atau fmt.Print() untuk menampilkan keluaran (Output). Komentar dapat ditulis menggunakan // untuk satu baris atau /* ... */ untuk beberapa baris. Selain itu, variabel dapat dideklarasikan menggunakan var untuk menyimpan data dengan tipe tertentu.
+#### 2. Proses
+Melakukan perhitungan menggunakan operator aritmatika dan rumus yang diperlukan.
 
-#### 3. Struktur Dasar Pemgrograman Go
-Variabel merupakan nama dari suatu lokasi di memori yang digunakan untuk menyimpan data dengan tiper tertentu. Dalam Go, variabel dapat dideklarasikan menggunakan var. Beberapa tipe data dasar yang terdapat dalam modul meliputi:
+#### 3. Output
+Menampilkan hasil menggunakan fmt.Println().
 
-##### a. Integer
-Adalah tipe data yang digunakan untuk menyimpan bilangan bulat, yaitu bilangan yang tidak memiliki angka pecahan atau koma. Dalam Go, tipe integer itu terdiri dari int, int8, int32, int64, uint, uint8, uint32, dan uint64. Tipe ini dapat digunakan untuk menyimpan nilai seperti jumlah, skor, atau angka lainnya yang merupakan bilangan bulat.
-
-##### b. Real 
-Adalah tipe data yang digunakan untuk menyimpan bilangan pecahan atau bilangan real, yaitu bilangan yang dapat memiliki angka di belakang koma. Dalam Go, tipe data real terdiri dari float32 dan float64. Tipe ini digunakan ketika program membutuhkan nilai yang lebih tepat dalam bentuk pecahan atau hasil perhitungan desimal.
-
-##### c. Boolean
-Adalah tipe data yang digunakan untuk menyimpan nilai logika, yaitu true atau false. Dalam Go, tipe data Boolean menggunakan bool. Nilai Boolean ini biasanya digunakan untuk menunjukkan suatu kondisi yang bernilai benar atau salah.
-
-##### d. String
-Adalah tipe data yang digunakan untuk menyimpan kumpulan karakter atau teks. Dalam Go, tipe data string menggunakan string. Tipe ini biasanya digunakan untuk menyimpan data berupa nama, kata, maupun kalimat yang diperlukan dalam program.
+Program juga menggunakan variabel dengan tipe data yang sesuai. Contohnya, int digunakan untuk jumlah hari dan uang, sedangkan float32 digunakan untuk nilai suhu yang dapat memiliki angka desimal. Penentuan tipe data merupakan bagian dari analisis masalah sebelum algoritma diterjemahkan ke bahasa pemrograman.
 
 
 <!-- Tambahkan poin A, B, C, ... atau sub-topik 1, 2, 3, ... sesuai kebutuhan modul -->
@@ -76,7 +68,7 @@ package main
 	}
 ```
 #### Deskripsi
-Program ini digunakan untuk menghitung luas lingkaran berdasarkan jari-jari yang dimasukkan. Program menggunakan variabel pi dan r, kemudian menghitung luas dengan rumus pi * r * r. Hasil perhitungan luas lingkaran setelah input dimasukkan dan diproses.
+Program ini digunakan untuk menghitung suhu melalui konversi dari celcius. Disini variabel dari c sebagai float32, lalu diinput suhu celcius tersebut melalui fmt.Scan dan keluarannya berupa inputan angka dari celcius kemudian ditambahkan angka 273 sehingga menghasilkan suhu yang dikonversi.
 
 ### 3. tukar.go
 
@@ -97,7 +89,7 @@ func main(){
 
 ```
 #### Deskripsi
-Program ini digunakan untuk menghitung total dan rata-rata skor dari dua mata pelajaran, yaitu Emteka dan Bahasa Inggris. Program menerima input nama dan kedua skor, kemudian menjumlahkan skor untuk mendapatkan total dan membaginya dengan 2 untuk mendapatkan rata-rata. Hasil berupa nama, total skor, dan rata-rata skor kemudian ditampilkan sebagai output.
+Program ini digunakan untuk menukar 3 variabel berupa x, y, dan Z. Variabel x, y, z sebagai integer (int). Kemudian ketiga variabel tersebut menggunakan fmt.Scan agar bisa diinput sendiri dan kemudian x disimpan ke temp untuk sementara, lalu z ditukar ke y dan y tadi ditukar ke temp yang awalnya x. Lalu keluaran dari nilai x, y, z yang ditukar tadi ditampilkan.
 
 <!-- Tambahkan blok file/kode lain sesuai jumlah file pada soal guided -->
 
@@ -138,7 +130,7 @@ func main(){
 
 
 #### Deskripsi
-Program ini digunakan untuk melakukan operasi aritmatika pada dua bilangan, yaitu penjumlahan, pengurangan, perkalian, pembagian, dan sisa hasil bagi. Program menerima inputan dari nilai a dan b, kemudian menghitung lalu menampilkan hasi dari setiap operasinya.
+Program ini digunakan untuk mengubah jumlah hari menjadi tahun, bulan, minggu, dan hari. Program menggunakan pembagian (/) untuk mendapatkan hasil dan modulus (%) untuk mendapatkan sisa hari. Asumsi yang digunakan adalah 1 tahun = 360 hari, 1 bulan = 30, dan 1 minggu = 7 hari.
 
 ### 2. reamur.go
 
@@ -161,14 +153,15 @@ func main(){
 ![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/reamur/Output.png)
 
 #### Deskripsi
-Program ini digunakan untuk menghitung total nilai uang berdasarkan jumlah pecahan Rp10.000, Rp5.000, dan Rp1.000 yang dimasukkan. Program menerima input jumlah masing-masing pecahan, kemudian menghitung total nilainnya menggunakan operasi perkalian dan penjumlahan. Hasil total nilai uang ditampilkan setelah proses menghitung.
+Program ini digunakan untuk mengubah suhu dari Celsius ke Reamur. Nilai Celsius dimasukkan oleh pengguna, kemudian dikonversi menggunakan rumus Reamur = Celsius * 4 / 5, lalu hasilnya ditampilkan
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 
 
 ## Kesimpulan
-Praktikum Modul 02 ini memberikan pemahaman pada saya tentang variabel, tipe data, input, output, operasi dasar dalam bahasa pemrograman Go. Melalui tugas guided dan unguided ini, konsepnya akan diterapkan dalam program perhitungan nilai, pertukaran variabel, konversi suhu, luas lingkaran, operasi aritmatika, dan perhitungan nilai uang. Hasil praktikum menunjukkan bahwa konsep dasar tersebut dapat digunakan untuk membuat program sederhana yang menerima input, melakukan proses, dan menghasilkan output sesuai kebutuhan kita.
+Berdasarkan keempat program, dapat disimpulkan bahwa praktikum modul 03 ini penyelesaian masalahnya dengan menentukan input, proses, dan output-nya terlebih dahulu. Pemilihan tipe data yang tepat serta penggunaan operator aritmatika membantu program menghasilkan output sesuai dengan permasalahan yang diberikan. Keempat program menerapkan konsep dasar analisis masalah dan implementasi algoritma ke dalam bahasa Go.
 
 ## Referensi
-1. The Go Authors. (2025). The Go Programming Language Specification. California: Google Inc. Diakses pada 27 September 2026 melalui https://go.dev/ref/spec
-2. The Go Authors. (2025). Documentation - The Go Programming Language. California: Google Inc. Diakses pada 27 September 2026 melalui https://go.dev/doc/
+1. Go. (2026). The Go Programming Language. https://go.dev/
+2. Go Documentation. (2026). The Go Programming Language Documentation. https://go.dev/doc/
+3. Go Package Documentation. (2026). fmt Package. https://pkg.go.dev/fmt
