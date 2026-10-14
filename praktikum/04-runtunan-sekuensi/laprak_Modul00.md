@@ -3,24 +3,20 @@
 
 ## Dasar Teori
 
-### A. Bahasa Pemrograman Go (Golang)
-Dalam pemrograman ini, penyelesaian masalahnya dilakukan dengan mengidentifikasi data masukan (input), proses yang dilakukan, dan informasi keluaran (output). Selain itu, tipe data harus ditentukan sesuai dengan data yang digunakan, seperti int untuk bilangan bulat dan float32 untuk bilangan rill.
+### A. Pengertian Runtutan (Sekuensi)
+Runtunan atau sekuensi merupakan salah satu struktur kontrol dasar dalam algoritma pemrograman. Runtunan adalah serangkaian instruksi yang dijalankan secara berurutan dari instruksi pertama hingga instruksi terakhir. Setiap instruksi dijalankan satu kali tanpa adanya percabangan atau perulangan. Urutan penulisan instruksi sangat berpengaruh terhadap hasil akhir program.
 
-Bahasa Go menggunakan package main, import, dan func main() sebagai struktur dasar program. Input dapat dibaca menggunakan fmt.Scan(), sedangkan output dapat ditampilkan menggunakan fmt.Println(). Operator aritmatika seperti +, *, /, dan % digunakan dalam proses perhitungan.
+### B. Ciri-Ciri Runtutan
+Struktur runtunan memiliki beberapa ciri, yaitu setiap instruksi dijalankan satu per satu secara berurutan, setiap instruksi dikerjakan tepat satu kali, dan alur program berjalan dari atas ke bawah. Pada struktur ini, tidak terdapat percabangan maupun perulangan yang mengubah urutan eksekusi program.
 
-### B. Struktur Pemrograman Go
+### C. Penerapan Runtutan dalam Pemrograman
+Runtunan dapat diterapkan untuk menyelesaikan permasalahan sederhana, seperti menampilkan biodata, melakukan perhitungan matematis, mengonversi satuan, menukar nilai variabel, dan mengolah data menggunakan rumus tertentu. Penyelesaian masalah dilakukan melalui tiga tahap utama, yaitu input untuk menerima data, proses untuk mengolah data, dan output untuk menampilkan hasil.
 
-#### 1. Input
-Menerima data dari pengguna menggunakan fmt.Scan().
+### D. Runtunan dalam Bahasa Pemrograman Go
+Dalam bahasa pemrograman Go, struktur runtunan diterapkan dengan menuliskan instruksi sesuai urutan pelaksanaannya. Variabel digunakan untuk menyimpan data, fmt.Scan() digunakan untuk membaca input, sedangkan fmt.Println() dan fmt.Printf() digunakan untuk menampilkan hasil. Operator aritmatika juga digunakan untuk melakukan perhitungan sesuai kebutuhan program.
 
-#### 2. Proses
-Melakukan perhitungan menggunakan operator aritmatika dan rumus yang diperlukan.
-
-#### 3. Output
-Menampilkan hasil menggunakan fmt.Println().
-
-Program juga menggunakan variabel dengan tipe data yang sesuai. Contohnya, int digunakan untuk jumlah hari dan uang, sedangkan float32 digunakan untuk nilai suhu yang dapat memiliki angka desimal. Penentuan tipe data merupakan bagian dari analisis masalah sebelum algoritma diterjemahkan ke bahasa pemrograman.
-
+### E. Flowchart Runtunan
+Flowchart runtunan merupakan diagram yang menggambarkan alur eksekusi program secara berurutan. Diagram ini menggunakan simbol terminal berbentuk oval untuk menunjukkan mulai dan selesai, jajaran genjang untuk input dan output, serta persegi panjang untuk proses. Setiap simbol dihubungkan dengan garis alur tanpa percabangan, sehingga alur program berjalan secara berurutan dari awal hingga akhir.
 
 <!-- Tambahkan poin A, B, C, ... atau sub-topik 1, 2, 3, ... sesuai kebutuhan modul -->
 
