@@ -278,7 +278,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/hari/Output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/output.png)
 
 
 #### Deskripsi
@@ -320,7 +320,7 @@ func main() {
 ```
 
 ##### Output
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/03-tipe-data-dan-instruksi-dasar/unguided/reamur/Output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/output.png)
 
 #### Deskripsi
 Program ini digunakan untuk menghitung pajak berdasarkan total penghasilan yang dimasukkan pengguna. Program menggunakan variabel penghasilan untuk menyimpan jumlah penghasilan dan pajak untuk menyimpan hasil perhitungan. Dengan menggunakan if-else, program menentukan tarif pajak sesuai rentang penghasilan, mulai dari 5% hingga 20%. Pajak dihitung secara bertingkat berdasarkan setiap lapisan penghasilan. Terakhir, program menampilkan total pajak yang harus dibayar.
