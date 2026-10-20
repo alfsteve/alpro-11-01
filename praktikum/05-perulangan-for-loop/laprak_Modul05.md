@@ -22,253 +22,165 @@ Flowchart runtunan merupakan diagram yang menggambarkan alur eksekusi program se
 
 ## Guided
 
-### 1. grade.go
-
-```go
-package main // Menentukan bahwa program ini berada di package main.
-// Package main digunakan untuk membuat program Go yang bisa dijalankan.
-
-import ( // Membuka bagian untuk mengimpor library/package yang dibutuhkan.
-	"bufio" // Digunakan untuk membaca input dari keyboard dengan Scanner.
-	"fmt"   // Digunakan untuk input dan output, seperti Print, Scan, dan Printf.
-	"os"    // Digunakan untuk mengakses input/output dari sistem operasi.
-)
-
-func main() { // Fungsi utama program. Program mulai dijalankan dari sini.
-
-	var nama string // Membuat variabel "nama" bertipe string untuk menyimpan nama.
-	var nilai float64 // Membuat variabel "nilai" bertipe float64 untuk menyimpan nilai angka.
-	var grade string // Membuat variabel "grade" bertipe string untuk menyimpan huruf nilai (A-F).
-
-	scanner := bufio.NewScanner(os.Stdin) 
-	// Membuat Scanner untuk membaca input dari keyboard.
-	// os.Stdin berarti input berasal dari keyboard.
-
-	fmt.Print("Masukkan nama: ")
-	// Menampilkan teks "Masukkan nama: " ke layar.
-	// Print tidak membuat baris baru.
-
-	scanner.Scan()
-	// Membaca input yang diketik oleh pengguna.
-	// Hasil input sementara disimpan oleh scanner.
-
-	nama = scanner.Text()
-	// Mengambil teks yang sudah dibaca oleh scanner.
-	// Kemudian memasukkannya ke dalam variabel nama.
-
-	fmt.Print("Masukkan nilai: ")
-	// Menampilkan teks "Masukkan nilai: " ke layar.
-
-	fmt.Scan(&nilai)
-	// Membaca angka yang dimasukkan pengguna.
-	// &nilai berarti alamat memori variabel nilai diberikan kepada Scan
-	// agar nilai yang dimasukkan dapat disimpan ke variabel nilai.
-
-	if nilai >= 90 && nilai <= 100 {
-		// Mengecek apakah nilai berada di antara 90 sampai 100.
-		// && berarti "DAN", jadi kedua kondisi harus benar.
-
-		grade = "A"
-		// Jika kondisi benar, grade diisi dengan "A".
-
-	} else if nilai >= 80 && nilai < 90 {
-		// Jika kondisi sebelumnya salah, cek apakah nilai 80 sampai kurang dari 90.
-
-		grade = "B"
-		// Jika benar, grade diisi dengan "B".
-
-	} else if nilai >= 70 && nilai < 80 {
-		// Jika kondisi sebelumnya salah, cek apakah nilai 70 sampai kurang dari 80.
-
-		grade = "C"
-		// Jika benar, grade diisi dengan "C".
-
-	} else if nilai >= 60 && nilai < 70 {
-		// Jika kondisi sebelumnya salah, cek apakah nilai 60 sampai kurang dari 70.
-
-		grade = "D"
-		// Jika benar, grade diisi dengan "D".
-
-	} else {
-		// Jika semua kondisi di atas salah, jalankan bagian ini.
-
-		grade = "F"
-		// Grade diisi dengan "F".
-	}
-
-	fmt.Printf("%s mendapatkan nilai %s\n", nama, grade)
-	// Menampilkan nama dan grade ke layar.
-	// %s digunakan untuk menampilkan data bertipe string.
-	// \n digunakan untuk pindah ke baris baru.
-	// Nilai pertama %s diambil dari variabel nama.
-	// Nilai kedua %s diambil dari variabel grade.
-}
-```
-#### Deskripsi
-Program ini merupakan program yang berfungsi untuk menentukan grade nilai mahasiswa berdasarkan nilai angka yang dimasukkan oleh user. Program ini dmulai dengan package main sebagai package utama, yang kemudian mengimpor library bufio, fmt, dan os untuk membantu proses input dan output-nya. Di dalam func main(), terdapat tiga variabel, yaitu 'nama' bertipe string untuk menyimpan nama mahasiswa, 'nilai' bertipe float64 untuk menyimpan angka, dan 'grade' bertipe string untuk menyimpan hasil nilai huruf. Program menggunakan bufio.NewScanner(os.Stdin) untuk membaca input nama dari keyboard, sedangkan fmt.Scan(&nilai) digunakan untuk membaca nilai angka yang dimasukkan oleh pengguna. Setelah nama dan nilai diterima, program menggunakan percabangan if-else untuk menentukan grade berdasarkan rentang nilai. Nilai 90 sampai 100 mendapatkan grade A, nilai 80 hingga kurang dari 90 mendapatkan grade B, nilai 70 mendapatkan grade D. Sementara itu, nilai yang tidak memenuhi kondisi tersebut akan mendapatkan grade F. Operator perbandingan seperti >=, <=, dan < digunakan untuk memeriksa rentang nilai, sedangkan operator && itu digunakan untuk memastikan kalau kedua kondisi terpenuhi. Terakhir, program menggunakan fmt.Printf() untuk menampilkan nama mahasiswa beserta grade yang didapat. Dengan demikian, program ini menerapkan konsep variabel, input, dan output, serta percabangan if-else untuk menentukan nilai huruf mahasiswa secara otomatis.
-
-### 2. penilaian.go
+### 1. tabungan.go
 
 ```go
 package main
-
-import (
-	"bufio" // Digunakan untuk membaca masukan string yang memiliki spasi (seperti nama lengkap)
-	"fmt"
-	"os" // Menyediakan akses ke sistem operasi, dalam hal ini os.Stdin yang merepresentasikan keyboard
-)
-
+import "fmt"
 func main() {
-	// Pendefinisian variabel secara eksplisit beserta tipe datanya
-	var pilihan int
-	var nama string
-	var nilai float64
-	var grade string
+	var a, b, n int
 
-	// Menampilkan cetakan Menu ke layar
-	fmt.Println("============= Menu =============")
-	fmt.Println("1. Sistem penilaian")
-	fmt.Println("0. Keluar")
-	fmt.Print("Pilih opsi: ")
+	fmt.Print("Masukkan tabungan awal: ")
+	fmt.Scan(&a)
+	fmt.Print("Masukkan kenaikan tabungan: ")
+	fmt.Scan(&b)
+	fmt.Print("Masukkan jumlah hari: ")
+	fmt.Scan(&n)
 
-	// Membaca masukan pilihan (angka).
-	// Kita menggunakan Scanln agar saat user menekan 'Enter', karakter enter tersebut
-	// ikut diolah/dibersihkan dan tidak melompat (mengganggu) masukan nama di bawahnya.
-	fmt.Scanln(&pilihan)
+	total := 0;
+	tabunganHari := a;
 
-	// Percabangan/Sekuensi bersyarat berdasarkan input pengguna
-	if pilihan == 1 {
-		fmt.Print("Masukkan nama siswa: ")
+	for i := 1; i <= n; i++ {
+		total = total + tabunganHari
+		tabunganHari = tabunganHari + b
+	}
+	fmt.Println(total)
+}
+```
+#### Deskripsi
+Program ini digunakan untuk menghitung total tabungan yang terkumpul selama beberapa hari. Program menerima tiga masukkan, yaitu tabungan awal, kenaikan tabungan setiap hari, dan jumlah hari. Variabel a menyimpan tabungan hari pertama, b menyimpan kenaikan tabungan per hari, dan n menyimpan jumlah hari yang akan dihitung.
 
-		// Membuat alat pembaca (scanner) baru yang mengambil masukan dari keyboard
-		scanner := bufio.NewScanner(os.Stdin)
+Variabel total digunakan untuk menyimpan akumulasi seluruh tabungan, sedangkan tabunganHari menyimpan jumlah tabungan pada hari yang sedang dihitung. Dengan perulangan for, program menjumlahkan tabungan setiap hari ke dalam total, kemudian menambahkan kenaikan tabungan sebesar b untuk hari berikutnya. Setelah seluruh hari selesai dihitung, program menampilkan total tabungan yang terkumpul.
 
-		// Proses membaca masukan dari pengguna sampai tombol Enter ditekan
-		scanner.Scan()
+### 2. terbesar.go
 
-		// Mengambil teks (nama) yang baru saja dibaca dan menyimpannya ke variabel
-		nama = scanner.Text()
+```go
+package main
+import "fmt"
+func main() {
+	var n, max, angka int
+	fmt.Scan(&n)
 
-		fmt.Print("Masukkan nilai siswa: ")
-		fmt.Scanln(&nilai)
+	fmt.Scan(&angka)
+	max = angka
 
-		// Menentukan grade nilai
-		if nilai >= 90 && nilai <= 100 {
-			grade = "A"
-		} else if nilai >= 80 && nilai < 90 {
-			grade = "B"
-		} else if nilai >= 70 && nilai < 80 {
-			grade = "C"
-		} else if nilai >= 60 && nilai < 70 {
-			grade = "D"
-		} else {
-			grade = "F"
+	for i := 2; i <= n; i++ {
+		fmt.Scan(&angka)
+
+		if angka > max {
+			max = angka
 		}
 
-		// %s adalah format (placeholder) untuk mencetak data bertipe string
-		// %s pertama akan digantikan oleh isi variabel 'nama', %s kedua oleh 'grade'
-		fmt.Printf("%s mendapatkan nilai %s\n", nama, grade)
-
-	} else if pilihan == 0 {
-		// Dijalankan jika pengguna mengetik 0
-		fmt.Println("Keluar dari program.")
-
-	} else {
-		// Dijalankan jika pengguna mengetik angka selain 1 dan 0
-		fmt.Println("Pilihan tidak valid.")
-	}
 }
+
+fmt.Println(max)
+}
+
 ```
 #### Deskripsi
-Program ini digunakan untuk membuat sistem penilaian siswa berbasis menu. Program dimulai dengan library bufio, fmt, dan os, serta mendefinisikan variabel 'pilihan,' 'nama,' 'nilai,' dan 'grade' sesuai tipe datanya. Selanjutnya, Program menampilkan menu yang menyediakan pilihan 1 untuk sistem penilaian dan 0 untuk keluar. Jika pengguna memilih 1, program akan meminta nama dan nilai siswa, kemudian menentukan grade dengan menggunakan percabangan if-else, yaitu A untuk nilai 90-100, B untuk 80 hingga kurang dari 90, C untuk 70 hingga kurang dari 80, D untuk 60 hingga kurang dari 70, dan F untuk nilai lainnya. Hasil penilaian kemudian ditampilkan menggunakan fmt.Printf(). Jika pengguna memilih 0, program menampilkan pesan bahwa program telah keluar, sedangkan pilihan selain 1 dan 0 akan menampilkan pesan bahwa pilihan tidak valid. Dengan demikian, program ini menerapkan konsep variabel, input, dan output, serta percabangan if-else untuk membuat sistem penilaian sederhana berbasis menu.
+Program ini digunakan untuk mencari nilai terbesar dari sejumlah bilangan bulat yang dimasukkan oleh pengguna. Program menerima masukan berupa jumlah bilangan n, kemudian membaca bilangan pertama dan menyimpannya ke dalam variabel max sebagai nilai terbesar sementara. 
 
-### 3. klasifikasi.go
+Selanjutnya, program menggunakan perulangan for untuk membaca bilangan kedua hingga bilangan ke-n. Setiap bilangan yang dibaca disimpan dalam variabel angka, lalu dibandingkan dengan nilai max menggunakan percabangan if. Jika angka lebih besar daripada max, nilai max diperbarui dengan bilangan tersebut. Proses ini terus dilakukan sampai seluruh bilangan selesai diperiksa.
+
+Setelah perulangan berakhir, program menampilkan nilai max sebagai bilangan terbesar dari seluruh masukan.
+
+### 3. bioskop.go
 
 ```go
 package main
-
-import (
-	"fmt" // Hanya memerlukan fmt untuk keperluan input dan output
-)
-
+import "fmt"
 func main() {
-	// Pendefinisian variabel secara eksplisit beserta tipe datanya
-	var usia int
-	var gaji int
-	var keterangan string
+	var t int
+	fmt.Print("Masukkan t (jumlah transaksi): ")
+	fmt.Scan(&t)
 
-	// Membaca dua masukan berupa angka dari pengguna (usia dan gaji)
-	// fmt.Scan otomatis memisahkan input berdasarkan spasi atau baris baru (enter)
-	fmt.Scan(&usia)
-	fmt.Scan(&gaji)
+	totalPendapatan := 0
 
-	// Menggunakan switch tanpa ekspresi.
-	// Cara kerjanya sama persis seperti deretan if - else if.
-	// Program akan mengecek dari atas ke bawah, dan menjalankan case pertama yang bernilai benar (true).
-	switch {
-	case usia < 18:
-		keterangan = "Masih sekolah"
-	case usia >= 18 && usia <= 25 && gaji >= 50:
-		keterangan = "Muda sukses"
-	case usia >= 18 && usia <= 25 && gaji < 50:
-		keterangan = "Masih belajar hidup"
-	case usia >= 26 && usia <= 40 && gaji >= 100:
-		keterangan = "Pekerja mapan"
-	case usia >= 26 && usia <= 40 && gaji < 100:
-		keterangan = "Perlu perbaikan karier"
-	case usia > 40 && gaji >= 150:
-		keterangan = "Profesional berpengalaman"
-	case usia > 40 && gaji < 150:
-		keterangan = "Perlu evaluasi finansial"
+	for i := 1; i <= t; i++ {
+		var jenisFilm, hari string
+		var jumlahTiket int
+		
+		fmt.Printf("Input transaksi ke-%d (jenis, hari, tiket): ", i)
+		fmt.Scan(&jenisFilm, &hari, &jumlahTiket)
+
+		hargaSatuan := 0;
+
+		if jenisFilm == "Reguler" {
+			if hari == "Senin" || hari == "Selasa" || hari == "Rabu" || hari == "Kamis" {
+				hargaSatuan = 40000
+			} else {
+				hargaSatuan = 50000
+			}
+
+		} else if jenisFilm == "3D"{
+			if hari == "Senin" || hari == "Selasa" || hari == "Rabu" || hari == "Kamis" {
+				hargaSatuan = 60000
+			} else {
+				hargaSatuan = 70000
+			}
+		} else if jenisFilm == "IMAX"{
+			if hari == "Senin" || hari == "Selasa" || hari == "Rabu" || hari == "Kamis" {
+				hargaSatuan = 80000
+			} else {
+				hargaSatuan = 90000
+			}
+		} 
+
+	
+
+	totalHarga := hargaSatuan * jumlahTiket
+
+	if jumlahTiket >= 5 {
+		diskon := (totalHarga * 10) / 100
+		totalHarga = totalHarga - diskon
+
 	}
 
-	// Menampilkan hasil klasifikasi ke layar
-	fmt.Println(keterangan)
+	fmt.Printf("output total hargan transaksi ke-%d: %d\n", i, totalHarga)	
+
+	totalPendapatan = totalPendapatan + totalHarga
+	}
+
+	fmt.Println("Output total pendapatan: ", totalPendapatan)
 }
 
 ```
 #### Deskripsi
-Program ini digunakan untuk mengklasifikasikan seseorang berdasarkan usia dan gaji. Program mengimpor library fmt untuk membaca input dan menampilkan output, kemudian mendefinisikan variabel 'usia' dan 'gaji' bertipe int, serta 'keterangan' bertipe string. Pengguna memasukkan usia dan gaji, lalu program menggunakan percabangan switch tanpa ekspresi untuk memeriksa kondisi secara berurutan. Jika usia di bawah 18 tahun, keterangannya adalah "Masih sekolah". Untuk usia 18-25 tahun, gaji minimal 50 menghasilkan keterangan "Muda sukses", sedangkan gaji di bawah 50 menghasilkan keterangan "Masih belajar hidup". Untuk usia 26-40 tahun, gaji minimal 100 dikategorikan sebagai "Pekerja mapan", sedangkan gaji di bawah 100 sebagai "Perlu perbaikan karier". Sementara itu, usia di atas 40 tahun dengan gaji minimal 150 dikategorikan sebagai "Profesional berpengalaman", sedangkan gaji di bawah 150 sebagai "Perlu evaluasi finansial". Terakhir, program menggunakan fmt.Println() untuk menampilkan hasil klasifikasi. Dengan demikian, program ini menerapkan konsep variabel, input-output, operator perbandingan, operator logika, dan percabangan switch untuk menentukan keterangan berdasarkan kondisi usia dan gaji.
+Program ini digunakan untuk menghitung harga tiket bioskop berdasarkan jenis film, hari transaksi, dan jumlah tiket yang dibeli. Program pertama-tama menerima masukan berupa jumlah transaksi. Selanjutnya, program melakukan perulangan sebanyak jumlah transaksi yang dimasukkan.
+
+Pada setiap transaksi, pengguna memasukkan jenis film, hari pembelian, dan jumlah tiket. Program menggunakan percabangan if-else untuk menentukan harga satuan tiket berdasarkan jenis film dan hari pembelian. Tiket Reguler memiliki harga Rp40.000 pada hari Senin sampai Kamis dan Rp50.000 pada hari lainnya. Tiket 3D memiliki harga Rp60.000 atau Rp70.000, sedangkan tiket IMAX memiliki harga Rp80.000 atau Rp90.000 berdasarkan kategori hari yang sama.
+
+Setelah harga satuan ditentukan, program menghitung total harga dengan mengalikan harga tiket dan jumlah tiket. Jika pembelian mencapai lima tiket atau lebih, program memberikan diskon sebesar 10% dari total harga. Hasil transaksi ditampilkan, kemudian ditambahkan ke variabel totalPendapatan. Setelah seluruh transaksi selesai diproses, program menampilkan total pendapatan dari semua transaksi.  
 
 <!-- Tambahkan blok file/kode lain sesuai jumlah file pada soal guided -->
 
 ## Unguided
 
-### 1. modif.go
+### 1. prima.go
 
 ```go
 package main
-import (
-	"fmt"
-	"bufio"
-	"os"
-)
-func main() {
-	var nama string
-	var nilai float64
-	var grade string
+import "fmt"
+func main(){
 
-	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Print("Masukkan nama: ")
-	scanner.Scan()
-	nama = scanner.Text()
-	fmt.Print("Masukkan nilai: ")
-	fmt.Scan(&nilai)
+	var n int
+	Faktor := 0
+	fmt.Scan(&n)
 
-	switch nilai {
-		case nilai >= 90 && nilai <= 100:
-			grade = "A"
-		case nilai >= 80 && nilai < 90:
-			grade = "B"
-		case nilai >= 70 && nilai < 80:
-			grade = "C"
-		case nilai >= 60 && nilai < 70:
-			grade = "D"
-		default:
-			grade = "E"
+	for i := 1; i <= n; i++ {
+		if n % i == 0{
+			fmt.Print(i, " ")
+			Faktor++
+		}
 	}
-	fmt.Printf("Nama: %s\n", nama)
-	fmt.Printf("Grade: %s\n", grade)
+
+	fmt.Println()
+
+	if Faktor == 2 {
+		fmt.Println("Ya")
+	} else {
+		fmt.Println("Tidak")
+	}
 }
 ```
 
@@ -278,57 +190,67 @@ func main() {
 
 
 #### Deskripsi
-Program ini digunakan untuk menentukan grade berdasarkan nama dan nilai yang dimasukkan pengguna. Program menggunakan 'bufio.Scanner' untuk membaca nama, 'fmt.Scan' untuk membaca nilai, dan 'switch' untuk menentukan grade A sampai E sesuai rentang nilai. Jika nilai di luar rentang 0–100, program menampilkan keterangan bahwa nilai tidak valid. Terakhir, program menampilkan nama dan grade pengguna.
+Program ini digunakan untuk untuk menentukan faktor-faktor suatu bilangan bulat positif dan memeriksa apakah bilangan tersebut merupakan bilangan prima. Program menerima sebuah bilangan n sebagai masukan, kemudian menggunakan perulangan for untuk memeriksa setiap bilangan dari 1 sampai n.
 
-### 2. pajak.go
+Pada setiap iterasi, program menggunakan operator modulus (%) untuk memeriksa sisa pembagian n dengan bilangan yang sedang diuji. Jika sisanya nol, bilangan tersebut merupakan faktor dari n. Program kemudian menampilkan faktor tersebut dan menambah variabel penghitung jumlah faktor.
+
+Setelah seluruh bilangan diperiksa, program menggunakan percabangan if-else untuk menentukan apakah jumlah faktor tepat dua. Jika jumlahnya dua, bilangan dinyatakan prima. Jika jumlah faktornya bukan dua, bilangan dinyatakan bukan prima. Dengan demikian, program dapat menampilkan daftar faktor sekaligus status bilangan yang diperiksa.
+
+### 2. ecct.go
 
 ```go
+
 
 package main
 
 import "fmt"
 
 func main() {
-	var penghasilan, pajak float64
+    var mahasiswa int
+    fmt.Scan(&mahasiswa)
 
-	fmt.Print("Masukkan penghasilan (juta): ")
-	fmt.Scan(&penghasilan)
+    sertif := 0
 
-	if penghasilan <= 50 {
-		pajak = 5.0 / 100 * penghasilan
-	} else if penghasilan <= 100 {
-		pajak = (5.0/100 * 50) +
-			(10.0/100 * (penghasilan - 50))
-	} else if penghasilan <= 200 {
-		pajak = (5.0/100 * 50) +
-			(10.0/100 * 50) +
-			(15.0/100 * (penghasilan - 100))
-	} else {
-		pajak = (5.0/100 * 50) +
-			(10.0/100 * 50) +
-			(15.0/100 * 100) +
-			(20.0/100 * (penghasilan - 200))
-	}
+    for i := 1; i <= mahasiswa; i++ {
+        total := 0
 
-	fmt.Printf("Total pajak: %g juta\n", pajak)
+        for j := 1; j <= 6; j++ {
+            var nilai int
+            fmt.Scan(&nilai)
+            total += nilai
+        }
+
+        ratarata := float64(total) / 6.0
+
+        if ratarata >= 3.33 {
+            fmt.Println("Ya")
+            sertif++
+        } else {
+            fmt.Println("Tidak")
+        }
+    }
+
+    fmt.Println(sertif)
 }
-
 ```
 
 ##### Output
 ![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/output.png)
 
 #### Deskripsi
-Program ini digunakan untuk menghitung pajak berdasarkan total penghasilan yang dimasukkan pengguna. Program menggunakan variabel penghasilan untuk menyimpan jumlah penghasilan dan pajak untuk menyimpan hasil perhitungan. Dengan menggunakan if-else, program menentukan tarif pajak sesuai rentang penghasilan, mulai dari 5% hingga 20%. Pajak dihitung secara bertingkat berdasarkan setiap lapisan penghasilan. Terakhir, program menampilkan total pajak yang harus dibayar.
+Program ini digunakan untuk untuk menentukan mahasiswa yang berhak mendapatkan sertifikat ECCT berdasarkan rata-rata enam nilai mata kuliah. Program menerima jumlah mahasiswa sebagai masukan, kemudian memproses nilai setiap mahasiswa menggunakan perulangan.
+
+Di dalam setiap iterasi mahasiswa, program menginisialisasi variabel total dengan nilai nol. Perulangan bersarang digunakan untuk membaca enam nilai dan menjumlahkannya. Setelah semua nilai dibaca, program menghitung rata-rata dengan membagi total nilai dengan enam.
+
+Program kemudian menggunakan percabangan if-else untuk memeriksa apakah rata-rata mahasiswa mencapai minimal 3,33. Jika memenuhi syarat, program menampilkan Ya dan menambah variabel sertif. Jika tidak memenuhi syarat, program menampilkan Tidak. Setelah seluruh mahasiswa selesai diproses, program menampilkan jumlah mahasiswa yang memperoleh sertifikat.
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 
 
 ## Kesimpulan
-Berdasarkan program yang telah dibuat, dapat disimpulkan bahwa penyelesaian masalah dalam praktikum ini dilakukan dengan menentukan input, proses, dan output terlebih dahulu. Penggunaan variabel, tipe data, serta struktur percabangan membantu program mengolah data dan menghasilkan output sesuai dengan kondisi yang diberikan. Program-program tersebut menerapkan konsep dasar analisis masalah dan implementasi algoritma ke dalam bahasa pemrograman Go.
+Berdasarkan program yang telah dibuat, dapat disimpulkan bahwa penyelesaian masalah dalam praktikum ini dilakukan dengan menentukan input, proses, dan output terlebih dahulu. Penggunaan variabel, tipe data, perulangan, serta struktur percabangan membantu program mengolah data, melakukan perhitungan, dan menghasilkan output sesuai dengan kondisi yang diberikan. Program-program tersebut menerapkan konsep dasar analisis masalah dan implementasi algoritma ke dalam bahasa pemrograman Go.
 
 ## Referensi
-1. The Go Authors. (n.d.). A Tour of Go. https://go.dev/tour/
-2. The Go Authors. (n.d.). Go Documentation. https://go.dev/doc/
-3. The Go Authors. (n.d.). fmt package. https://pkg.go.dev/fmt
-4. The Go Authors. (n.d.). bufio package. https://pkg.go.dev/bufio
+1. The Go Authors. (n.d.). A Tour of Go — Basics.https://go.dev/tour/basics
+2. The Go Authors. (n.d.). A Tour of Go — Flow Control Statements: for, if, else. https://go.dev/tour/flowcontrol
+3. The Go Authors. (n.d.). Package fmt Documentation. https://pkg.go.dev/fmt
