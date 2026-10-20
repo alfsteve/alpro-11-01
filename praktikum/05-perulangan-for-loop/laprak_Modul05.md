@@ -186,7 +186,7 @@ func main(){
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/unguided/prima/output.png)
 
 
 #### Deskripsi
@@ -235,7 +235,7 @@ func main() {
 ```
 
 ##### Output
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/pajak/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/unguided/ecct/output.png)
 
 #### Deskripsi
 Program ini digunakan untuk untuk menentukan mahasiswa yang berhak mendapatkan sertifikat ECCT berdasarkan rata-rata enam nilai mata kuliah. Program menerima jumlah mahasiswa sebagai masukan, kemudian memproses nilai setiap mahasiswa menggunakan perulangan.
