@@ -26,7 +26,7 @@ func main(){
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/tp/ganjil/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/lulus/output.png)
 
 #### Deskripsi
 Program ini digunakan untuk menentukan kelulusan siswa berdasarkan nilai ujian yang dimasukkan oleh pengguna. Program membaca nilai secara berulang menggunakan perulangan for dengan kondisi nilai != -1. Jika nilai lebih besar atau sama dengan 60, program menampilkan pesan "Anda lulus ujian." Namun, jika nilai kurang dari 60, program menampilkan pesan "Anda tidak lulus ujian." Proses akan berlangsung sampai pengguna memasukkan nilai -1, kemudian program menampilkan pesan "Program selesai." Program ini menerapkan konsep perulangan, percabangan if-else, input dan penggunaan nilai sentinel sebagai kondisi berhenti.
@@ -53,7 +53,7 @@ func main(){
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/tp/ganjil/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/deret/output.png)
 
 #### Deskripsi
 Program ini digunakan untuk menghitung jumlah deret bilangan dari 1 sampai bilangan bulat positif n. Program menggunakan variabel penghitung untuk menentukan angka yang sedang diproses dan variabel penjumlahan untuk menyimpan total sementara. Melalui perulangan for, setiap angka ditambahkan ke total hingga penghityng mencapai nilai n. Setelah kondisi perulangan tidak lagi terpenuhi, program menampilkan hasil penjumlahan. Program ini menerapkan konsep perulangan, variabel penghitung, dan akumulasi nilai.
@@ -115,7 +115,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/tp/ganjil/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/duaterendah/output.png)
 
 #### Deskripsi
 Program ini digunakan untuk mencari nama siswa yang memperoleh nilai terendah dan nilai kedua terendah dari sejumlah siswa yang dimasukkan oleh pengguna. Program membaca jumlah siswa terlebih dahulu, kemudian menerima nama dan nilai setiap siswa. Dua nilai terendah disimpan dalam variabel, lalu dibandingkan dengan nilai berikutnya menggunakan percabangan if-else. Jika ditemukan nilai yang lebih rendah, program memperbarui nilai dan nama siswa pada posisi yang sesuai. Setelah semua siswa diproses, program menampilkan nama siswa dengan nilai terendah dan kedua terendah. Program ini menerapkan konsep perulangan, percabangan, perbandingan nilai, dan pembaruan variabel.
@@ -146,7 +146,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/05-perulangan-for-loop/tp/perkalian/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/biaya/output.png)
 
 
 #### Deskripsi
