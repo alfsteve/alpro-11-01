@@ -1,22 +1,19 @@
-# <h1 align="center">Laporan Praktikum Modul 04 - Runtutan/Sekuensi</h1>
+# <h1 align="center">Laporan Praktikum Modul 05 - Perulangan For</h1>
 <p align="center">[Alfaro Steve Christian Hadiwiyata] - [109092600022]</p>
 
 ## Dasar Teori
 
-### A. Pengertian Runtutan (Sekuensi)
-Runtunan atau sekuensi merupakan salah satu struktur kontrol dasar dalam algoritma pemrograman. Runtunan adalah serangkaian instruksi yang dijalankan secara berurutan dari instruksi pertama hingga instruksi terakhir. Setiap instruksi dijalankan satu kali tanpa adanya percabangan atau perulangan. Urutan penulisan instruksi sangat berpengaruh terhadap hasil akhir program.
+### A. Pengertian Perulangan (Looping)
+Perulangan atau looping merupakan struktur kontrol dalam algoritma pemrograman yang digunakan untuk menjalankan suatu blok kode secara berulang selama kondisi tertentu terpenuhi. Perulangan membantu menyederhanakan penulisan program sehingga instruksi yang sama tidak perlu ditulis berulang kali. Dalam bahasa pemrograman Go, perulangan menggunakan kata kunci for yang dapat diterapkan dalam beberapa bentuk sesuai kebutuhan program.
 
-### B. Ciri-Ciri Runtutan
-Struktur runtunan memiliki beberapa ciri, yaitu setiap instruksi dijalankan satu per satu secara berurutan, setiap instruksi dikerjakan tepat satu kali, dan alur program berjalan dari atas ke bawah. Pada struktur ini, tidak terdapat percabangan maupun perulangan yang mengubah urutan eksekusi program.
+### B. Jenis-Jenis Perulangan dalam Go
+Bahasa pemrograman Go memiliki beberapa bentuk perulangan, yaitu for dengan tiga komponen, for dengan kondisi, for tanpa kondisi, dan for-range. Perulangan dengan tiga komponen terdiri atas inisialisasi, kondisi, dan pembaruan nilai variabel. Perulangan dengan kondisi menjalankan instruksi selama kondisi bernilai benar, sedangkan for tanpa kondisi dapat menghasilkan perulangan tanpa henti apabila tidak diberikan mekanisme penghentian. Sementara itu, for-range digunakan untuk mengakses elemen dalam kumpulan data, seperti array, slice, string, dan map.
 
-### C. Penerapan Runtutan dalam Pemrograman
-Runtunan dapat diterapkan untuk menyelesaikan permasalahan sederhana, seperti menampilkan biodata, melakukan perhitungan matematis, mengonversi satuan, menukar nilai variabel, dan mengolah data menggunakan rumus tertentu. Penyelesaian masalah dilakukan melalui tiga tahap utama, yaitu input untuk menerima data, proses untuk mengolah data, dan output untuk menampilkan hasil.
+### C. Penerapan Perulangan For
+Perulangan for dapat digunakan untuk menyelesaikan berbagai permasalahan, seperti menampilkan deret bilangan, menghitung jumlah bilangan dari satu sampai nilai tertentu, serta menjalankan instruksi berulang berdasarkan kondisi yang ditentukan. Dalam penerapannya, variabel penghitung (counter) digunakan untuk mengatur jumlah pengulangan. Kondisi perulangan menentukan kapan proses dilanjutkan atau dihentikan, sedangkan pembaruan nilai variabel dilakukan agar perulangan dapat mencapai kondisi berhenti.
 
-### D. Runtunan dalam Bahasa Pemrograman Go
-Dalam bahasa pemrograman Go, struktur runtunan diterapkan dengan menuliskan instruksi sesuai urutan pelaksanaannya. Variabel digunakan untuk menyimpan data, fmt.Scan() digunakan untuk membaca input, sedangkan fmt.Println() dan fmt.Printf() digunakan untuk menampilkan hasil. Operator aritmatika juga digunakan untuk melakukan perhitungan sesuai kebutuhan program.
-
-### E. Flowchart Runtunan
-Flowchart runtunan merupakan diagram yang menggambarkan alur eksekusi program secara berurutan. Diagram ini menggunakan simbol terminal berbentuk oval untuk menunjukkan mulai dan selesai, jajaran genjang untuk input dan output, serta persegi panjang untuk proses. Setiap simbol dihubungkan dengan garis alur tanpa percabangan, sehingga alur program berjalan secara berurutan dari awal hingga akhir.
+### D. Perulangan Bersarang (Nested For-Loop)
+Perulangan bersarang atau nested for-loop merupakan struktur perulangan yang menempatkan satu perulangan di dalam perulangan lainnya. Struktur ini digunakan untuk menyelesaikan permasalahan yang membutuhkan pengulangan bertingkat, seperti menampilkan pola karakter, matriks, dan tabel. Pada setiap pengulangan luar, perulangan dalam akan dijalankan sesuai kondisi yang telah ditentukan.
 
 <!-- Tambahkan poin A, B, C, ... atau sub-topik 1, 2, 3, ... sesuai kebutuhan modul -->
 
