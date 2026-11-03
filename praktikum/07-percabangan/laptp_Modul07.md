@@ -59,7 +59,7 @@ func main(){
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/deret/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/07-percabangan/tp/tp1/output.png)
 
 #### Deskripsi
 
@@ -121,7 +121,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/duaterendah/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/07-percabangan/tp/tp2/output.png)
 
 #### Deskripsi
 Program hari.go merupakan program yang digunakan untuk menentukan nama hari berdasarkan nomor hari yang dimasukkan oleh pengguna, mulai dari 1 hingga 7. Program ini menggunakan struktur percabangan switch untuk mencocokkan nomor yang dimasukkan dengan nama hari yang sesuai. Khusus untuk hari Sabtu dan Minggu, program akan menambahkan keterangan akhir pekan. Jika nomor yang dimasukkan berada di luar rentang 1–7, program akan menampilkan pesan bahwa nomor hari tidak valid.
@@ -152,7 +152,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/tp/biaya/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/07-percabangan/tp/tp3/output.png)
 
 
 #### Deskripsi

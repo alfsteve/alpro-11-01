@@ -3,25 +3,10 @@
 
 ## Dasar Teori
 
-### A. Pengertian Perulangan (Looping)
-Perulangan atau looping merupakan struktur kontrol dalam algoritma pemrograman yang digunakan untuk menjalankan sekumpulan instruksi secara berulang selama kondisi tertentu terpenuhi. Perulangan membantu menyederhanakan penulisan program karena instruksi yang sama tidak perlu ditulis berulang kali. Dalam bahasa pemrograman Go, perulangan menggunakan kata kunci for, yang dapat diterapkan dengan tiga komponen maupun hanya menggunakan kondisi.
+### A. Percabangan if
+Percabangan merupakan salah satu struktur dasar dalam pemrograman yang digunakan untuk mengatur alur eksekusi program berdasarkan kondisi tertentu. Struktur ini memungkinkan program untuk mengambil keputusan dengan mengevaluasi suatu kondisi yang menghasilkan nilai boolean, yaitu true atau false. Dalam bahasa pemrograman Go, terdapat beberapa jenis percabangan, yaitu if, if-else, else-if, dan switch. Percabangan if digunakan untuk menjalankan perintah ketika suatu kondisi bernilai benar, sedangkan if-else digunakan untuk menentukan salah satu dari dua kemungkinan berdasarkan hasil evaluasi kondisi. Sementara itu, else-if memungkinkan program memeriksa beberapa kondisi secara berurutan, dan switch digunakan untuk memilih satu dari beberapa kemungkinan berdasarkan nilai atau kondisi yang sesuai. 
 
-### B. Perulangan While dalam bahasa Go
-Perulangan while merupakan struktur perulangan yang menjalankan instruksi selama kondisi bernilai benar (true). Bahasa pemrograman Go tidak menyediakan kata kunci while secara langsung. Oleh karena itu, perulangan while diterapkan menggunakan for yang hanya berisi kondisi. Kondisi diperiksa sebelum instruksi di dalam perulangan dijalankan. Jika kondisi bernilai benar, instruksi akan dijalankan. Sebaliknya, jika kondisi bernilai salah, perulangan akan berhenti. Oleh karena itu, diperlukan perubahan nilai variabel atau kondisi lain di dalam perulangan agar program dapat mencapai kondisi berhenti dan tidak mengalami perulangan tanpa akhir.
-
-### C. Komponen Perulangan While
-Perulangan while memiliki beberapa komponen penting, yaitu kondisi, variabel pengendali, dan instruksi yang diulang. Kondisi berfungsi menentukan apakah perulangan dilanjutkan atau dihentikan. Variabel pengendali digunakan untuk menyimpan nilai yang memengaruhi kondisi perulangan, sedangkan instruksi yang diulang berisi proses yang akan dijalankan selama kondisi masih terpenuhi.
-
-### D. Perulangan Repeat-Until
-Perulangan repeat-until merupakan struktur perulangan yang menjalankan instruksi terlebih dahulu, kemudian memeriksa kondisi berhenti. Dengan demikian, instruksi di dalam perulangan dijalankan setidaknya satu kali, meskipun kondisi berhenti sebenarnya sudah terpenuhi sejak awal.
-
-Bahasa pemrograman Go tidak menyediakan kata kunci repeat-until secara langsung. Perilaku tersebut dapat diterapkan menggunakan for dengan kondisi penghentian yang diperiksa di dalam blok perulangan.
-
-### E. Penerapan Perulangan While
-Perulangan while dapat digunakan untuk menyelesaikan berbagai permasalahan, seperti mencari bilangan yang memenuhi batas tertentu, menghitung jumlah karakter dalam sebuah kalimat, dan mengulang proses input sampai kondisi tertentu tercapai. Dalam penerapannya, program perlu menentukan kondisi awal, proses yang diulang, serta kondisi berhenti.
-
-Sebagai contoh, untuk mencari bilangan bulat terkecil yang pangkat tiganya lebih besar dari suatu batas, program dapat memulai pencarian dari bilangan 1. Selama hasil pangkat tiga belum melebihi batas, nilai bilangan akan terus ditambah. Setelah kondisi terpenuhi, program menampilkan bilangan yang ditemukan.
-
+Dalam penerapannya, percabangan memanfaatkan operator perbandingan seperti ==, !=, >, <, >=, dan <=, serta operator logika seperti && (AND), || (OR), dan ! (NOT) untuk menggabungkan atau memodifikasi kondisi. Pada bahasa Go, struktur switch secara otomatis mengakhiri eksekusi suatu case, sehingga tidak memerlukan penggunaan break secara eksplisit. Dengan memahami konsep percabangan, programmer dapat membuat program yang mampu mengambil keputusan, melakukan validasi input, serta menghasilkan keluaran yang berbeda sesuai dengan kondisi yang diberikan.
 <!-- Tambahkan poin A, B, C, ... atau sub-topik 1, 2, 3, ... sesuai kebutuhan modul -->
 
 ## Guided
@@ -181,136 +166,141 @@ Program ini digunakan untuk menghitung biaya pengiriman paket berdasarkan berat 
 ### 1. besok.go
 
 ```go
+
 package main
+
 import "fmt"
-func main(){
 
-    const passwordBenar = "1234"
+func main() {
+    var tanggal, bulan, tahun int
+    var jumlahHari int
 
-    saldo := 10000000
-    percobaan := 0
-    login := false
+    fmt.Print("Masukkan tanggal, bulan, tahun: ")
+    fmt.Scan(&tanggal, &bulan, &tahun)
 
-    for percobaan < 3 && !login {
-        var password string
+    // Menentukan tahun kabisat
+    kabisat := (tahun%4 == 0 && tahun%100 != 0) ||
+        (tahun%400 == 0)
 
-        fmt.Print("Masukkan password ATM: ")
-        fmt.Scan(&password)
-
-        if password == passwordBenar {
-            login = true
-            fmt.Println("Login berhasil!")
+    // Menentukan jumlah hari dalam bulan
+    switch bulan {
+    case 1, 3, 5, 7, 8, 10, 12:
+        jumlahHari = 31
+    case 4, 6, 9, 11:
+        jumlahHari = 30
+    case 2:
+        if kabisat {
+            jumlahHari = 29
         } else {
-            percobaan++
-            fmt.Println("Password salah. Silakan coba lagi.")
+            jumlahHari = 28
         }
+    default:
+        jumlahHari = 0
     }
 
-    if !login {
-        fmt.Println("ATM terblokir. Program selesai.")
-        return
-    }
+    // Memeriksa validitas tanggal
+    if tanggal < 1 || tanggal > jumlahHari {
+        fmt.Println("Tanggal tidak valid")
+    } else {
+        fmt.Println("Valid")
 
-    pilihan := 0
+        // Menentukan tanggal berikutnya
+        tanggal++
 
-    for pilihan != 3 {
-        fmt.Println("Menu ATM:")
-        fmt.Println("1. Lihat Saldo")
-        fmt.Println("2. Tarik Uang")
-        fmt.Println("3. Keluar")
-        fmt.Print("Pilih: ")
-        fmt.Scan(&pilihan)
+        if tanggal > jumlahHari {
+            tanggal = 1
+            bulan++
 
-        if pilihan == 1 {
-            fmt.Println("Saldo Anda: Rp", saldo)
-        } else if pilihan == 2 {
-            var penarikan int
-
-            fmt.Print("Masukkan jumlah uang yang ingin ditarik: Rp ")
-            fmt.Scan(&penarikan)
-
-            if penarikan <= 0 {
-                fmt.Println("Jumlah penarikan tidak valid.")
-            } else if penarikan <= saldo {
-                saldo -= penarikan
-                fmt.Println("Anda berhasil menarik uang sebesar Rp", penarikan)
-                fmt.Println("Saldo tersisa: Rp", saldo)
-            } else {
-                fmt.Println("Saldo tidak mencukupi.")
+            if bulan > 12 {
+                bulan = 1
+                tahun++
             }
-        } else if pilihan == 3 {
-            fmt.Println("Keluar dari sistem. Terima kasih!")
-        } else {
-            fmt.Println("Pilihan tidak valid.")
         }
+
+        fmt.Printf("%d/%d/%d\n", tanggal, bulan, tahun)
     }
 }
 ```
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/06-perulangan-while-loop-dan-repeat/unguided/atm/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/07-percabangan/unguided/besok/output.png)
 
 
 #### Deskripsi
-Program ini digunakan untuk memeriksa validitas suatu tanggal berdasarkan tanggal, bulan, dan tahun yang dimasukkan oleh pengguna, kemudian menentukan tanggal keesokan harinya. Program menggunakan percabangan if-else dan switch untuk memeriksa jumlah hari dalam setiap bulan serta menentukan apakah suatu tahun termasuk tahun kabisat atau bukan. Jika tanggal yang dimasukkan valid, program akan menampilkan keterangan valid beserta tanggal berikutnya. Program juga memperhitungkan pergantian bulan dan tahun, termasuk perubahan dari tanggal 31 Desember ke 1 Januari tahun berikutnya. Apabila tanggal tidak sesuai dengan ketentuan kalender, program akan menampilkan pesan bahwa tanggal tidak valid.
+Program ini digunakan untuk untuk memeriksa validitas suatu tanggal berdasarkan tanggal, bulan, dan tahun yang dimasukkan oleh pengguna, kemudian menentukan tanggal keesokan harinya. Program menggunakan percabangan if-else dan switch untuk memeriksa jumlah hari dalam setiap bulan serta menentukan apakah suatu tahun termasuk tahun kabisat atau bukan. Jika tanggal yang dimasukkan valid, program akan menampilkan keterangan valid beserta tanggal berikutnya. Program juga memperhitungkan pergantian bulan dan tahun, termasuk perubahan dari tanggal 31 Desember ke 1 Januari tahun berikutnya. Apabila tanggal tidak sesuai dengan ketentuan kalender, program akan menampilkan pesan bahwa tanggal tidak valid.
 
-### 2. modif.go
+### 2. parkir.go
 
 ```go
 package main
-import (
-	"fmt"
-	"bufio"
-	"os"
-)
+import "fmt"
 func main() {
-	var nama string
-	var nilai float64
-	var grade string
+	
+    var kendaraan string
+    var jam, tarif, denda, total int
 
-	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Print("Masukkan nama: ")
-	scanner.Scan()
-	nama = scanner.Text()
-	fmt.Print("Masukkan nilai: ")
-	fmt.Scan(&nilai)
+    fmt.Print("Masukkan jenis kendaraan (Mobil/Motor): ")
+    fmt.Scan(&kendaraan)
 
-	switch nilai {
-		case nilai >= 90 && nilai <= 100:
-			grade = "A"
-		case nilai >= 80 && nilai < 90:
-			grade = "B"
-		case nilai >= 70 && nilai < 80:
-			grade = "C"
-		case nilai >= 60 && nilai < 70:
-			grade = "D"
-		default:
-			grade = "E"
-	}
-	fmt.Printf("Nama: %s\n", nama)
-	fmt.Printf("Grade: %s\n", grade)
+    fmt.Print("Masukkan lama parkir (jam): ")
+    fmt.Scan(&jam)
+
+    if jam <= 0 {
+        fmt.Println("Lama parkir tidak valid")
+        return
+    }
+
+    if kendaraan == "Mobil" {
+        tarif = 5000
+        denda = 50000
+
+        if jam > 1 {
+            total = tarif + (jam-1)*3000
+        } else {
+            total = tarif
+        }
+
+    } else if kendaraan == "Motor" {
+        tarif = 3000
+        denda = 30000
+
+        if jam > 1 {
+            total = tarif + (jam-1)*2000
+        } else {
+            total = tarif
+        }
+
+    } else {
+        fmt.Println("Jenis kendaraan tidak valid")
+        return
+    }
+
+    if jam > 24 {
+        total += denda
+    }
+
+    fmt.Println("Total tarif parkir: Rp", total)
 }
 ```
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/04-runtunan-sekuensi/unguided/modif_grade/output.png)
+![Screenshot Output Unguided](https://github.com/alfsteve/alpro-11-01/blob/main/praktikum/07-percabangan/unguided/tarifparkir/output.png)
 
 
 #### Deskripsi
-Program ini digunakan untuk menentukan grade berdasarkan nama dan nilai yang dimasukkan pengguna. Program menggunakan 'bufio.Scanner' untuk membaca nama, 'fmt.Scan' untuk membaca nilai, dan 'switch' untuk menentukan grade A sampai E sesuai rentang nilai. Jika nilai di luar rentang 0–100, program menampilkan keterangan bahwa nilai tidak valid. Terakhir, program menampilkan nama dan grade pengguna.
+Program ini digunakan untuk untuk menghitung biaya parkir berdasarkan jenis kendaraan dan durasi parkir. Program menerima input berupa jenis kendaraan, yaitu mobil atau motor, serta lama parkir dalam satuan jam. Perhitungan tarif dilakukan menggunakan percabangan if-else untuk membedakan jenis kendaraan dan menentukan biaya berdasarkan jam pertama serta jam berikutnya. Apabila lama parkir melebihi 24 jam, program akan memberikan denda tambahan sebesar Rp50.000 untuk mobil dan Rp30.000 untuk motor. Hasil akhir program berupa total biaya parkir yang harus dibayarkan.
 
 ## Kesimpulan
-Berdasarkan praktikum Modul 07 tentang Percabangan, dapat disimpulkan bahwa perulangan while dalam Go diterapkan menggunakan for yang hanya berisi kondisi. Perulangan ini digunakan untuk menjalankan instruksi selama kondisi masih terpenuhi.
+Berdasarkan praktikum Modul 07 tentang Percabangan menggunakan bahasa pemrograman Go, dapat disimpulkan bahwa percabangan merupakan salah satu konsep dasar pemrograman yang berfungsi untuk mengatur alur jalannya program berdasarkan kondisi tertentu. Dengan menggunakan percabangan, program dapat mengambil keputusan dan menjalankan perintah yang berbeda sesuai dengan nilai atau kondisi yang diberikan oleh pengguna.
 
-Program terkecil.go dan terbesar.go menerapkan perulangan untuk mencari bilangan yang memenuhi batas tertentu, sedangkan vokal.go menggunakannya untuk menghitung huruf vokal dalam kalimat. Program atm.go menerapkan perulangan untuk membatasi percobaan login dan menampilkan menu ATM hingga pengguna memilih keluar.
+Dalam praktikum ini, dipelajari penggunaan struktur if, if-else, else-if, dan switch untuk menyelesaikan berbagai permasalahan, seperti menentukan bilangan positif atau negatif, menentukan hari berdasarkan angka, menghitung tarif parkir, serta melakukan validasi tanggal dan perhitungan lainnya.
 
-Praktikum ini memberikan pemahaman tentang penggunaan kondisi, perubahan variabel, dan penghentian perulangan, serta penerapannya bersama percabangan untuk menyelesaikan permasalahan menggunakan bahasa pemrograman Go.
+Melalui pengerjaan tugas praktikum, dapat dipahami bahwa pemilihan struktur percabangan yang tepat dapat membuat program menjadi lebih terstruktur, efektif, dan mudah dipahami. Selain itu, penggunaan kondisi yang tepat serta validasi input sangat penting untuk menghindari kesalahan proses dan menghasilkan keluaran yang sesuai dengan ketentuan program.
+
+Dengan demikian, praktikum ini membantu meningkatkan pemahaman mengenai logika pengambilan keputusan dalam pemrograman serta menjadi dasar untuk mempelajari konsep pemrograman yang lebih kompleks.
 
 ## Referensi
-1. The Go Authors. (n.d.). A Tour of Go — Basics. https://go.dev/tour/basics
-2. The Go Authors. (n.d.). A Tour of Go — Flow Control Statements: for, if, else. https://go.dev/tour/flowcontrol
-3. The Go Authors. (n.d.). Package fmt Documentation. https://pkg.go.dev/fmt
-4. The Go Authors. (n.d.). Package bufio Documentation. https://pkg.go.dev/bufio
-5. The Go Authors. (n.d.). Package strings Documentation. https://pkg.go.dev/strings
+1. The Go Authors. (n.d.). The Go Programming Language Specification. https://go.dev/ref/spec
+2. The Go Authors. (n.d.). Effective Go. https://go.dev/doc/effective_go
