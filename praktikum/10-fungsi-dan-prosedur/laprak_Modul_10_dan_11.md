@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul 10 dan 11 - “FUNGSI DAN PROSEDUR”</h1>
-<p align="center">[Rizky Fadlurrahman Ramadhan] - [109092630002]</p>
+<p align="center">[Alfaro Steve Christian Hadiwiyata] - [109092600022]</p>
 
 ## Dasar Teori
 
