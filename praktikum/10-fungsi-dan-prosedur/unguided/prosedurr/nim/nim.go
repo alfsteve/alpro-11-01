@@ -1,0 +1,50 @@
+package main
+
+import "fmt"
+
+const NMAX int = 2002
+
+type tabNIM [NMAX]int64
+
+func cariNIM(T tabNIM, n int, x int64, idx *int) {
+	*idx = -1
+	for i := 0; i < n; i++ {
+		if T[i] == x && *idx == -1 {
+			*idx = i
+		}
+	}
+}
+
+func ubahNIM(T *tabNIM, idx int, baru int64) {
+	T[idx] = baru
+}
+
+func cetak(T tabNIM, n int) {
+	for i := 0; i < n; i++ {
+		fmt.Println(T[i])
+	}
+}
+
+func main() {
+	var T tabNIM
+	var n, idx int
+	var x, baru int64
+
+	fmt.Scan(&n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&T[i])
+	}
+
+	fmt.Scan(&x)
+	cariNIM(T, n, x, &idx)
+
+	if idx == -1 {
+		fmt.Println("NIM tidak ditemukan dalam sistem")
+	} else {
+		fmt.Printf("Mahasiswa dengan NIM %d terdaftar pada posisi ke-%d\n", x, idx+1)
+		fmt.Scan(&baru)
+		ubahNIM(&T, idx, baru)
+		fmt.Println("Daftar NIM setelah terjadi perubahan data:")
+		cetak(T, n)
+	}
+}
